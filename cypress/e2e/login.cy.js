@@ -1,6 +1,6 @@
 describe('template spec', () => {
   beforeEach(() => {
-    cy.visit('/') // Visita a URL antes de cada teste
+    cy.visit('/') 
   });
 
   it('Login com dados válidos', () => {
