@@ -1,0 +1,19 @@
+name: Run Basic Testes
+
+on:
+pull_requests:
+branches: [master]
+
+jobs:
+cypress-run:
+run-on: ubuntu-latest
+steps: 
+-name: Checkout/Close do projeto
+ uses: action/checkout@v3
+
+ name: instalar dependencias do projeto
+ run: cypress-io/github-action@v5
+ with: 
+ record: true
+ env:
+ CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY }}
